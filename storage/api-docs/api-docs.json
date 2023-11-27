@@ -1,8 +1,8 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "NSIS Authentication",
-        "description": "NSIS Login Auth & Permission",
+        "title": "User Auth Module API",
+        "description": "Login Auth & Permission",
         "contact": {
             "email": "lucianmacwolf@gmail.com"
         },
