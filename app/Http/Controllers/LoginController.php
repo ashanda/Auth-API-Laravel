@@ -19,7 +19,7 @@ class LoginController extends Controller
         $this->auth = $auth;
     }
         /**
-     * @OA\POST(
+     * @OA\Post(
      *     path="/api/login",
      *     tags={"Authentication"},
      *     summary="Login",

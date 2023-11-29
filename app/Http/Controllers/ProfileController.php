@@ -46,7 +46,7 @@ class ProfileController extends Controller
         }
     }
   /**
-     * @OA\POST(
+     * @OA\Post(
      *     path="/api/logout",
      *     tags={"Authentication"},
      *     summary="User logout",
