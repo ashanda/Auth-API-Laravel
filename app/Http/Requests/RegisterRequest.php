@@ -30,7 +30,8 @@ class RegisterRequest extends ApiFormRequest
             'name' => 'required',
             'user_type' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:6|confirmed'
+            'password' => 'required|min:6|confirmed',
+            'client_secret'=>'required|unique:users',
         ];
     }
 

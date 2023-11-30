@@ -25,7 +25,6 @@ class RegisterController extends Controller
      *     description="Register to system.",
      *     operationId="register",
      *     @OA\RequestBody(
-     *         description="Pet object that needs to be added to the store",
      *         required=true,
      *         @OA\MediaType(
      *             mediaType="application/json",
@@ -36,6 +35,12 @@ class RegisterController extends Controller
      *                     description="User Name",
      *                     type="string",
      *                     example="Jhon Doe"
+     *                 ),
+     *                  @OA\Property(
+     *                     property="user_type",
+     *                     description="User Type",
+     *                     type="string",
+     *                     example="0"
      *                 ),
      *                 @OA\Property(
      *                     property="email",
