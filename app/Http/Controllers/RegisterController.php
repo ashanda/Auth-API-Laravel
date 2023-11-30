@@ -20,10 +20,11 @@ class RegisterController extends Controller
     /**
      * @OA\POST(
      *     path="/api/register",
-     *     tags={"Authentication"},
+     *     tags={"Permissions"},
      *     summary="Register",
      *     description="Register to system.",
      *     operationId="register",
+     *     security={{"bearer":{}}},
      *     @OA\RequestBody(
      *         required=true,
      *         @OA\MediaType(
