@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 */
 Route::post('/login', [LoginController::class,'login']);
 Route::post('/register', [RegisterController::class,'register']);
-
+//Route::post('/password/reset/request', [PasswordResetController::class, 'requestPasswordReset']);
+//Route::post('/password/reset', [PasswordResetController::class, 'resetPassword'])->name('password.reset');
 
 Route::middleware('auth:api')->group(function () {
     Route::get('/profile', [ProfileController::class,'show']);
