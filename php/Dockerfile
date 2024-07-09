@@ -49,6 +49,11 @@ RUN apt-get -y install --fix-missing \
 #     zip \
 #     intl
 
+# Install MySQL client
+RUN apt-get update \
+    && apt-get install -y mysql-client \
+    && rm -rf /var/lib/apt/lists/*
+
 # Install Postgre PDO
 RUN apt-get install -y libpq-dev \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
