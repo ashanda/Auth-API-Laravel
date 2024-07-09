@@ -32,7 +32,7 @@ class AuthRepository
     {
         
         $user = User::create($this->prepareDataForRegister($data));
-       
+
         if (!$user) {
             throw new Exception("Sorry, user does not registered, Please try again.", 500);
         }
@@ -71,6 +71,7 @@ class AuthRepository
         return [
             'name' => $data['name'],
             'user_type' => $data['user_type'],
+            'client_secret' => Hash::make($data['client_secret']),
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ];

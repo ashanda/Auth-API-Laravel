@@ -20,10 +20,11 @@ class RegisterController extends Controller
     /**
      * @OA\POST(
      *     path="/api/register",
-     *     tags={"Authentication"},
+     *     tags={"Permissions"},
      *     summary="Register",
      *     description="Register to system.",
      *     operationId="register",
+     *     security={{"bearer":{}}},
      *     @OA\RequestBody(
      *         required=true,
      *         @OA\MediaType(
@@ -59,6 +60,12 @@ class RegisterController extends Controller
      *                     description="User confirm password",
      *                     type="string",
      *                     example="12345678"
+     *                 ),
+     *                 @OA\Property(
+     *                     property="client_secret",
+     *                     description="Client Secret",
+     *                     type="string",
+     *                     example="ZnFeVUJL3vJNz@QR9D#8NKgkbUqbFam45pc$d4Qh"
      *                 ),
      *                 required={"name", "email", "password", "password_confirmation"}
      *             )
